@@ -8,6 +8,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using FocusFlow.DB;
+using FocusFlow.Pages;
 
 namespace FocusFlow
 {
@@ -16,9 +18,11 @@ namespace FocusFlow
     /// </summary>
     public partial class MainWindow : Window
     {
+        FocusDbContext Context { get; set; }
         public MainWindow()
         {
             InitializeComponent();
+            MainFrame.Navigate(new TaskListsPage());
         }
     }
 }

@@ -18,31 +18,4 @@ namespace FocusFlow.DB
             optionsBuilder.UseSqlite("Data Source=focusflow.db");
         }
     }
-
-    public class PomodoroSession
-    {
-        public int Id { get; set; }
-        public int TaskId {  get; set; }
-        public DateTime StartTime;
-        public int DurationMinutes { get; set; }
-        public string SessionType { get; set; }
-    }
-
-    public class TaskItem
-    {
-        public int Id { get; set; }
-        public string Title {  get; set; }
-        public string? Description { get; set; }
-        public PriorityLevel Priority { get; set; }
-        public bool IsDone { get; set; }
-
-
-    }
-
-    public enum PriorityLevel
-    {
-        Low,
-        Medium,
-        High
-    }
 }
